@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Heebo:wght@500&display=swap');
+
+body {
+    background: url("world.png") no-repeat center 25px local,
+    linear-gradient(#FFFFFF, #CFD8DC) no-repeat center fixed;
+    background-size: 90%, contain;
+}
+
+h1 {
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+    color: #434D54;
+}
+
+p {
+    padding: 16px 16px;
+    text-align: center;
+    font-family: 'Antonio', sans-serif;
+    font-size: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 160px 160px 160px;
+    grid-template-rows: 160px 160px 160px;
+    grid-gap: 14px;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease-in-out;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.front {
+    color: #F39107;
+    background-color: #FFEEDD;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    color: #FFEEDD;
+    background-color: #F39107;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
